@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    database: bi-neoway
+    schema: raw
+    tables:
+      - name: cotacoes_bolsa
+      - name: empresas_bolsa
+      - name: df_empresas
+      - name: empresas_porte
+      - name: empresas_simples
+      - name: empresas_nivel_atividade
+      - name: empresas_saude_tributaria

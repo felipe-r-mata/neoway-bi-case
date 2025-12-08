@@ -1,0 +1,67 @@
+with base as (
+    select
+        id,
+        tp_reg,
+        dt_pregao,
+        cd_bdi,
+        cd_acao,
+        cd_acao_rdz,
+        tp_merc,
+        nm_empresa_rdz,
+        especi,
+        prazot,
+        moeda_ref,
+        vl_abertura,
+        vl_maximo,
+        vl_minimo,
+        vl_medio,
+        vl_fechamento,
+        vl_mlh_oft_compra,
+        vl_mlh_oft_venda,
+        vl_ttl_neg,
+        qt_tit_neg,
+        vl_volume,
+        vl_exec_opc,
+        in_opc,
+        dt_vnct_opc,
+        ft_cotacao,
+        vl_exec_moeda_corrente,
+        cd_isin,
+        created_at,
+        updated_at
+    from {{ source('raw', 'cotacoes_bolsa') }}
+)
+
+select
+    id,
+    -- dt_pregao vem como inteiro AAAAMMDD na base
+    parse_date('%Y%m%d', cast(dt_pregao as string)) as data,
+    cd_acao                               as ticker,
+    cd_acao_rdz,
+    cd_bdi,
+    tp_merc,
+    nm_empresa_rdz,
+    especi,
+    prazot,
+    moeda_ref,
+
+    vl_abertura,
+    vl_maximo,
+    vl_minimo,
+    vl_medio,
+    vl_fechamento,
+    vl_mlh_oft_compra,
+    vl_mlh_oft_venda,
+    vl_ttl_neg          as quantidade_negocios,
+    qt_tit_neg          as quantidade_titulos,
+    vl_volume,
+    vl_exec_opc,
+    in_opc,
+    dt_vnct_opc,
+    ft_cotacao,
+    vl_exec_moeda_corrente,
+    cd_isin,
+
+    created_at,
+    updated_at
+from base

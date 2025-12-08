@@ -1,0 +1,22 @@
+name: 'bi_neoway'
+version: '1.0.0'
+config-version: 2
+
+profile: 'bi_neoway'
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+models:
+  bi_neoway:
+    staging:
+      +schema: staging          # escreve em bi-neoway.staging
+      +materialized: view
+
+    marts:
+      +schema: marts            # escreve em bi-neoway.marts
+      +materialized: table
+      dim:
+        +materialized: table
+      fact:
+        +materialized: table

@@ -1,0 +1,17 @@
+Installing dbt project and profile setup
+Info Created .vscode/extensions.json with dbt extension recommendation
+Success Project created successfully!
+Info Project name: jaffle_shop
+Info Project directory: jaffle_shop
+Info Setting up your profile...
+Info Creating new profile...
+No dbt_cloud.yml found - proceeding without cloud pre-population
+Success Profile written to ./.dbt\profiles.yml
+Validating profile inputs, adapters, and connection
+
+dbt-fusion 2.0.0-preview.16
+error: dbt1005: No profiles.yml found at `C:\Users\cs372848\.dbt\profiles.yml` or `.\profiles.yml`. 
+
+suggestion: Run `dbt init` to create a profiles.yml file and connect to your database. 
+  Finished 'init'  with 1 error in 5m 29s
+New version available 2.0.0-preview.72 (run `dbt system update`)
