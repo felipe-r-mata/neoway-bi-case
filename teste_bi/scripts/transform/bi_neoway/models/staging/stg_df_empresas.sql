@@ -1,5 +1,5 @@
 select
-    cnpj,
+    cast(cnpj as int64)                 as cnpj,
     cast(dt_abertura as date)           as dt_abertura,
     matriz_empresaMatriz                as fl_matriz,
     cd_cnae_principal                   as cd_cnae_principal,
