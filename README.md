@@ -23,7 +23,7 @@ teste_bi/
 │   │       ├── .dbt/        # Metadados locais do dbt
 │   │       ├── dbt_project.yml
 │   │       └── packages.yml
-│   └── explore_all.py       # Script de exploração (fornecido)
+│   └── explore_all.py       # Script de exploração
 │
 ├── Processo Seletivo - Prova técnica BI S&M - V2.pdf
 └── README.md                # Este arquivo
@@ -121,7 +121,7 @@ Foco na visão macro do mercado de ações no período analisado.
 **Principais visualizações**
 
 - **Variação % de Preço por Ticker** (Top N ativos)
-- **Retorno Diário %** ao longo do tempo (com troca de granularidade: Ano, Mês/Ano, Mês, Trimestre, Dia)
+- **Média dos Retornos Diários %** média dos retornos diários do período selecionado, calculado a partir do preço de fechamento. (com troca de granularidade: Ano, Mês/Ano, Mês, Trimestre, Dia)
 - **Preço de Fechamento Médio** por período
 
 **Filtros**
