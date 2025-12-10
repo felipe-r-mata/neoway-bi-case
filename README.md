@@ -91,12 +91,100 @@ Criadas em `dw_marts`, com foco analítico:
 Link do relatório publicado:  
 🔗 **https://app.powerbi.com/view?r=eyJrIjoiZTQ1MDhjMWEtY2Y0MC00MmVmLWFhZjMtOWM2YTRiZDA4OTI4IiwidCI6ImFhMmRkZTY0LWI4MDItNGNjNC1iNDE3LWJiNjBlMWIxODVlYyJ9**
 
-### ✔ Conteúdos apresentados:
-- KPIs macroeconômicos de mercado  
-- Análise de variação percentual por ativo  
-- Retorno diário e mensal  
-- Preço médio por período  
-- Filtros interativos: ano, ticker, mês e trimestre  
+
+O arquivo `BI-Neoway.pbix` contém uma **landing page** de navegação e **3 dashboards** principais:
+
+---
+
+### 🔵 Landing Page – Menu de Navegação
+
+- Tela inicial com identidade visual da Neoway / B3  
+- Botões para acesso direto aos painéis:
+  - **Visão Geral de Mercado & Desempenho das Empresas**
+  - **Segmentação & Perfil das Empresas**
+  - **Desempenho Financeiro por Perfil de Empresa**
+
+---
+
+### 1) Visão Geral de Mercado & Desempenho das Empresas
+
+Foco na visão macro do mercado de ações no período analisado.
+
+**Principais KPIs**
+
+- Preço máximo do período  
+- Preço do último fechamento  
+- Volume total negociado  
+- Quantidade de negócios  
+- Volatilidade % (dispersão dos retornos)
+
+**Principais visualizações**
+
+- **Variação % de Preço por Ticker** (Top N ativos)
+- **Retorno Diário %** ao longo do tempo (com troca de granularidade: Ano, Mês/Ano, Mês, Trimestre, Dia)
+- **Preço de Fechamento Médio** por período
+
+**Filtros**
+
+- Ano  
+- Código da ação (código B3)
+
+---
+
+### 2) Segmentação & Perfil das Empresas
+
+Painel voltado para a visão demográfica e estrutural do ecossistema empresarial.
+
+**Principais visualizações**
+
+- **Empresas por Estado** – Mapa com concentração geográfica  
+- **Distribuição Regional (%)** – participação das regiões no total de empresas  
+- **Top 10 Ramos de Atividade** em número de empresas
+
+**Filtros**
+
+- Região  
+- Município  
+- Faixa de **data de abertura** (slider de 1891 a 2022)
+
+Esse painel permite identificar:
+- concentração geográfica,
+- maturidade econômica,
+- oportunidades por ramo de atividade.
+
+---
+
+### 3) Desempenho Financeiro por Perfil de Empresa
+
+Conecta métricas de mercado ao perfil das empresas em diferentes dimensões.
+
+**Principais KPIs**
+
+- Preço de fechamento médio  
+- Preço do último fechamento  
+- Volume total negociado  
+- Quantidade de empresas associadas  
+- Volatilidade %
+
+**Principais visualizações**
+
+- **Preço Médio por Ramo de Atividade**  
+- **Preço Médio** por:
+  - Região  
+  - Porte  
+  - Saúde Tributária  
+  - Nível de Atividade  
+  (seleção via botão/segmentador no topo do gráfico)
+- **Volume vs Preço Médio** por segmento (gráfico combinado: colunas + linha)
+
+**Filtros**
+
+- Ano  
+- Código da ação (código B3)  
+- Região / Município  
+- Faixa de data de abertura
+
+Valores sem informação em porte, saúde tributária ou nível de atividade são explicitamente agrupados na categoria **"NÃO INFORMADO"**, preservando a integridade do volume de análise e deixando clara a limitação da base original.
 
 ---
 
