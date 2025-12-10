@@ -188,22 +188,6 @@ Valores sem informação em porte, saúde tributária ou nível de atividade sã
 
 ---
 
-## 🧪 Testes de Qualidade (dbt)
-
-Foram implementados testes de:
-
-- `not_null`
-- `unique`
-- `relationships`
-
-Aplicados principalmente em:
-
-- chaves naturais  
-- chaves substitutas  
-- colunas críticas da fato  
-
----
-
 ## 🛠️ Tecnologias Utilizadas
 
 | Camada     | Ferramenta |
